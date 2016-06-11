@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "fis3 server clean",
-    "start": "fis3 release && fis3 server start --www output",
+    "start": "fis3 release waimai && fis3 server start --www output",
     "stop": "fis3 server stop"
   },
   "repository": {
