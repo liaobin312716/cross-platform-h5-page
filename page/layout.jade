@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type" content="text/html;charset=utf-8")
+    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    meta(content="telephone=no" name="format-detection")
+    script.
+      window.STATISTIC = {};
+      STATISTIC.start = Date.now();
+    block title
+      title
+    link(rel="stylesheet" href="/assets/css/weui.css")
+    block style
+  body
+    div.pages
+      block content
+    //div.s-mask.hide
+    script.
+      STATISTIC.layoutReady = Date.now();
+    script(src="/assets/js/mod.js")
+    script(src="/assets/js/zepto.js")
+    script(src="/assets/js/adapter.js")
+    block script

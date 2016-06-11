@@ -1,0 +1,42 @@
+extends ./layout.jade
+block title
+  title 随意购测试页
+block style
+  style.
+    p{
+      margin: 15px 30px;
+    }
+block content
+  div.page.test-page
+    p
+      img(id="img")
+    p
+      a.weui_btn.weui_btn_primary(href="javascript:void(0)" surl="/page/index.html") 外卖demo首页
+
+    p
+      button.weui_btn.weui_btn_primary(surl="/page/index.html") 糯米demo首页
+
+block script
+  script.
+    $(function(){
+      $('a').on('click',function(e){
+        location.href = 'bdwm://native?pageName=webview&url='+ encodeURIComponent('http://' + location.host + $(e.currentTarget).attr('surl')) +'&header=1'
+      })
+
+      var BNJSReady = function (readyCallback) {
+        if (readyCallback && typeof readyCallback == 'function') {
+          if (window.BNJS && typeof window.BNJS == 'object' && BNJS._isAllReady) {
+            readyCallback();
+          } else {
+            document.addEventListener('BNJSReady', function () {
+              readyCallback();
+            }, false)
+          }
+        }
+      };
+      BNJSReady(function () {
+        alert('hahha')
+      });
+
+    })
+

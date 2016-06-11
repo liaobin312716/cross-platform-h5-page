@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta content="telephone=no" name="format-detection"><title>随意购测试页</title>    <link rel="stylesheet" href="/css/weui_00b4b96.css" />
+    <style>p{
+  margin: 15px 30px;
+}</style>
+</head><body><div class="pages"><div class="page test-page"><p><img id="img"></p><p><a href="javascript:void(0)" surl="/page/index.html" class="weui_btn weui_btn_primary">外卖demo首页</a></p><p><button surl="/page/index.html" class="weui_btn weui_btn_primary">糯米demo首页</button></p></div></div><!--div.s-mask.hide--><script src="/assets/js/mod.js"></script>
+<script>/*resourcemap*/
+
+window.STATISTIC = {};
+STATISTIC.start = Date.now();
+STATISTIC.layoutReady = Date.now();</script>
+<script src="/assets/js/zepto.js"></script>
+<script src="/assets/js/adapter.js"></script>
+<script>$(function(){
+  $('a').on('click',function(e){
+    location.href = 'bdwm://native?pageName=webview&url='+ encodeURIComponent('http://' + location.host + $(e.currentTarget).attr('surl')) +'&header=1'
+  })
+
+  var BNJSReady = function (readyCallback) {
+    if (readyCallback && typeof readyCallback == 'function') {
+      if (window.BNJS && typeof window.BNJS == 'object' && BNJS._isAllReady) {
+        readyCallback();
+      } else {
+        document.addEventListener('BNJSReady', function () {
+          readyCallback();
+        }, false)
+      }
+    }
+  };
+  BNJSReady(function () {
+    alert('hahha')
+  });
+
+})</script>
+</body></html>

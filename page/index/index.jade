@@ -1,0 +1,12 @@
+extends ../layout.jade
+block title
+  title 多容器离线方案
+//block style
+  link(rel="stylesheet" href="../../assets/css/animate.less" type="text/css")
+block content
+  div.page.index-page
+    div.dialog-btn
+      button.weui_btn.weui_btn_primary click me
+block script
+  script.
+    require("./../../widget/index/index.es6").init(".page.index-page")
